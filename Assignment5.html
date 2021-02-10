@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+    <script>
+  function myFunction() {
+    document.getElementById("TestJava").innerHTML = "Hello JavaScript!";
+  }
+  function myBackFunction() {
+    document.getElementById("TestJava").innerHTML = "And Back, Test Me Again!";
+  }
+    </script>
+ </head>
+<body>
+<h1>Customer Information</h1>
+<p id="TestJava">JavaScript Test!</p>
+<button type="button" onclick="myFunction()">Forward</button><br><br>
+<button type="button" onclick="myBackFunction()">Backward</button><br><br><Br>
+<!--<form onsubmit = "return results();" action="/action_page.php">-->
+<form onsubmit = "return results();" method = "post" action="mailto:mhaxton@usf.edu">
+  <label for="fname">Enter  Your  First  Name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Enter  You  Last  Name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <label for="email">Enter Your E-mail Address:</label>
+  <input type="email" id="email" name="email"><br><br>
+  <input type="submit" value="Submit"><Br><Br>
+ </form>
+<script>
+function results() {
+var firstName = document.getElementById('fname').value;
+var lastName = document.getElementById('lname').value;
+var emailAddress = document.getElementById('email').value;
+document.write("<h3 style=color:red;>Your Submitted Information.</h3>");
+document.write(firstName + " " + lastName + "<br/>" + emailAddress);
+}
+</script>
+</body>
+</html>
